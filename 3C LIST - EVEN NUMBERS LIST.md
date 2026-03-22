@@ -1,39 +1,37 @@
-# Exp.No:3c
-## LIST - EVEN NUMBERS LIST
+# Exp.No:3d  
+## TUPLES - A TUPLE WITH MULTIPLES OF 5
 
 ---
 
-### AIM: 
-To write a Python function that accepts a number **N** and creates a list containing all even numbers up to **N**.
+### AIM:
+To write a Python program to create a tuple containing all multiples of 5 up to a given number **N**.
 
 ---
 
 ### ALGORITHM:
 
 1. Begin the program.  
-2. Accept an integer `a` from the user.  
-3. Create an empty list `l`.  
-4. Use a `for` loop to iterate through numbers from `1` to `a - 1`:  
-   - For each number `i`, check if it is even using `i % 2 == 0`.  
-   - If it is even, append `i` to the list `l`.  
-5. Print the final list `l` containing all the even numbers.  
+2. Accept an integer `N` from the user.  
+3. Use a generator expression inside the `tuple()` function to create a tuple `multiples_of_5` with values starting from `5` up to `N - 1`, stepping by `5`.  
+4. Return the tuple `multiples_of_5`.  
+5. Print the resulting tuple.  
 6. Terminate the program.
 
 ---
 
 ### PROGRAM:
 ```
-l=eval(input())
-sum=1
-for i in range(0,len(l)):
-    if l[i]%10==2:
-        sum*=l[i]
-print("Product= {}".format(sum))
+l=[]
+n=int(input())
+for i in range(5,n,5):
+    l.append(i)
+t=tuple(l)
+print(t)
 ```
 
 ### OUTPUT:
-<img width="932" height="214" alt="image" src="https://github.com/user-attachments/assets/b8f2953a-f97b-4ffc-9d11-e7a32dbe70c6" />
+<img width="786" height="228" alt="image" src="https://github.com/user-attachments/assets/4e87a9f2-9086-4600-942e-5bff468fc40b" />
 
 
 ### RESULT:
-Thus a python program to display the product of all the values which are ending with 2 from a list has been successfully implemented.
+Thus a Python program to create a tuple containing all multiples of 5 up to a given number N has been implemented and executed.
